@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="hero-content container">
         <span className="hero-badge fade-in">🌿 100% Natural • Grass-Fed • Handmade</span>
         <h1 className="fade-in" style={{ animationDelay: '0.1s' }}>
-          Nature's Original <em>Moisturizer</em>
+          Nature's Original <em>Nourishment</em>
         </h1>
         <p className="fade-in" style={{ animationDelay: '0.2s' }}>
           Experience the ancestral wisdom of grass-fed beef tallow skincare. 
