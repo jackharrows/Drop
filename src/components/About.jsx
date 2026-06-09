@@ -20,33 +20,37 @@ export default function About() {
           </div>
 
           <div className="about-text">
-            <h2>Ancestral Wisdom for <br/>Modern Skin</h2>
+            <h2>The Ancestral Glow Story</h2>
             <p>
-              Before modern skincare filled shelves with chemicals and preservatives, 
-              our ancestors relied on one ingredient for beautiful, resilient skin: 
-              <strong> beef tallow</strong>.
+              At Ancestral Glow, we believe that modern skincare has lost its way. In the rush for convenience and low costs, 
+              the industry has traded time-tested, ancestral wisdom for synthetic chemicals, laboratory-made fillers, 
+              and hormone-disrupting preservatives. We are here to bridge that gap and <strong>return to the basics</strong>.
             </p>
             <p>
-              Tallow is one of the most bio-identical substances to human sebum, 
-              meaning your skin recognizes and absorbs it instantly. Rich in 
-              vitamins A, D, E, and K, it delivers deep nourishment that 
-              modern moisturizers simply can't match.
+              Our journey began with a simple discovery: the most effective nourishment for our skin has been right under our 
+              feet for centuries. Long before the era of industrial beauty, our ancestors understood the profound healing 
+              power of animal fats. Beef tallow, in particular, was a staple for skin protection and health due to its 
+              incredible compatibility with human biology.
             </p>
             <p>
-              At <strong>Ancestral Glow</strong>, we source 100% grass-fed tallow 
-              from regenerative farms. Every batch is slow-rendered, hand-whipped, 
-              and blended with organic herbs and oils — never any synthetic 
-              additives, preservatives, or fragrances.
+              By sourcing <strong>100% grass-fed, pasture-raised beef tallow</strong> and combining it with pure, 
+              organic botanicals, we've created a skincare line that respects tradition and delivers real results. 
+              We partner with small-scale, regenerative farms that prioritize animal welfare and soil health, 
+              ensuring that every jar we produce is as ethical as it is effective.
+            </p>
+            <p>
+              We don't just sell skincare; we're inviting you to reconnect with nature's original nourishment. 
+              <strong> Welcome back to your original glow.</strong>
             </p>
 
             <div className="about-values">
               <div className="about-value">
-                <h4>🌱 Grass-Fed</h4>
-                <p>100% grass-fed & pasture-raised beef tallow</p>
+                <h4>🌱 Grass-Fed & Pasture-Raised</h4>
+                <p>100% grass-fed tallow from regenerative farms</p>
               </div>
               <div className="about-value">
-                <h4>🧪 Lab Tested</h4>
-                <p>Third-party tested for purity & safety</p>
+                <h4>🧪 Nutrient-Dense</h4>
+                <p>Rich in Vitamins A, D, E, K & Omega-3s</p>
               </div>
               <div className="about-value">
                 <h4>♻️ Zero Waste</h4>

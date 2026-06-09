@@ -4,16 +4,15 @@ export default function Hero() {
       <div className="hero-content container">
         <span className="hero-badge fade-in">🌿 100% Natural • Grass-Fed • Handmade</span>
         <h1 className="fade-in" style={{ animationDelay: '0.1s' }}>
-          Nature's Original <em>Nourishment</em>
+          Nourish Your Skin with <em>Ancestral Wisdom</em>
         </h1>
         <p className="fade-in" style={{ animationDelay: '0.2s' }}>
-          Experience the ancestral wisdom of grass-fed beef tallow skincare. 
-          Rich in vitamins A, D, E & K — your skin's deepest nourishment, 
-          naturally.
+          Experience the radiance of 100% natural, grass-fed beef tallow skincare. 
+          Pure, organic, and rooted in nature.
         </p>
         <div className="hero-actions fade-in" style={{ animationDelay: '0.3s' }}>
           <a href="#products" className="btn btn-primary btn-large">
-            Shop Our Collection
+            Shop the Collection
           </a>
           <a href="#about" className="btn btn-secondary btn-large">
             Our Story
@@ -44,7 +43,7 @@ export default function Hero() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
             </svg>
-            Satisfaction Guaranteed
+            100% Satisfaction
           </div>
         </div>
       </div>

@@ -14,15 +14,24 @@ export default function Contact() {
             <p>
               We're here to help! Whether you have a question about ingredients, 
               need skincare advice, or want to discuss wholesale opportunities — 
-              reach out anytime.
+              reach out anytime. Our team typically responds within 24 hours.
             </p>
 
             <ul className="contact-details">
               <li>hello@ancestralglow.com</li>
               <li>Response within 24 hours</li>
-              <li>Free consultations available</li>
-              <li>Wholesale & bulk pricing</li>
+              <li>Free skincare consultations</li>
+              <li>Wholesale & bulk pricing available</li>
             </ul>
+
+            <div className="contact-social" style={{ marginTop: '1.5rem' }}>
+              <p style={{ fontWeight: 600, color: 'var(--color-dark)', marginBottom: '0.5rem' }}>Follow Us</p>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                <a href="#" style={{ color: 'var(--color-primary)', fontSize: '0.9rem' }} onClick={(e) => { e.preventDefault(); alert('Follow us on Instagram @ancestralglow'); }}>Instagram</a>
+                <a href="#" style={{ color: 'var(--color-primary)', fontSize: '0.9rem' }} onClick={(e) => { e.preventDefault(); alert('Follow us on TikTok @ancestralglow'); }}>TikTok</a>
+                <a href="#" style={{ color: 'var(--color-primary)', fontSize: '0.9rem' }} onClick={(e) => { e.preventDefault(); alert('Follow us on Facebook @ancestralglow'); }}>Facebook</a>
+              </div>
+            </div>
           </div>
 
           <form
