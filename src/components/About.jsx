@@ -1,61 +1,56 @@
+const PILLARS = [
+  { title: 'Grass-Fed Sourcing', desc: 'Tallow from 100% grass-fed, pasture-raised cattle.' },
+  { title: 'Small Batch', desc: 'Made in small runs for freshness and quality control.' },
+  { title: 'Clean Ingredients', desc: 'No synthetic additives, fillers, or hidden chemicals.' },
+  { title: 'Regenerative', desc: 'Supporting farms that give back to the land.' },
+];
+
 export default function About() {
   return (
     <section className="section about-section" id="about">
       <div className="container">
         <div className="about-grid">
-          <div className="about-image-visual" style={{ overflow: 'hidden' }}>
+          {/* Visual */}
+          <div className="about-visual">
             <img
               src="/images/lifestyle_concept.png"
               alt="Ancestral Glow lifestyle"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
               onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.nextSibling.style.display = 'flex';
               }}
             />
-            <div className="about-image-fallback" style={{ display: 'none', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-              <span className="visual-icon">🐄</span>
-              <span className="visual-text">Grass-Fed • Pasture-Raised • Small Batch</span>
-            </div>
+            <div className="about-visual-placeholder" style={{ display: 'none' }}>🌿</div>
           </div>
 
+          {/* Text */}
           <div className="about-text">
-            <h2>Ancestral Wisdom for <br/>Modern Skin</h2>
+            <span className="section-label">Our Story</span>
+            <h2 className="section-title">Returning to<br />our roots</h2>
+
             <p>
-              Before modern skincare filled shelves with chemicals and preservatives, 
-              our ancestors relied on one ingredient for beautiful, resilient skin: 
-              <strong> beef tallow</strong>.
+              Before moisturisers came in plastic tubes with ingredient lists you need a
+              chemistry degree to read, people used what the land gave them. Beef tallow —
+              rendered from grass-fed cattle — has nourished skin for centuries.
             </p>
             <p>
-              Tallow is one of the most bio-identical substances to human sebum, 
-              meaning your skin recognizes and absorbs it instantly. Rich in 
-              vitamins A, D, E, and K, it delivers deep nourishment that 
-              modern moisturizers simply can't match.
+              We started Ancestral Glow because we believe your skin deserves food-grade
+              ingredients it actually recognises. Tallow's fatty-acid profile mirrors that of
+              human sebum, which is why it absorbs so well and plays so nicely with all skin types.
             </p>
             <p>
-              At <strong>Ancestral Glow</strong>, we source 100% grass-fed tallow 
-              from regenerative farms. Every batch is slow-rendered, hand-whipped, 
-              and blended with organic herbs and oils — never any synthetic 
-              additives, preservatives, or fragrances.
+              Every jar is made in small batches in the USA, using tallow from regenerative farms
+              that treat their animals and their land with care.
             </p>
 
-            <div className="about-values">
-              <div className="about-value">
-                <h4>🌱 Grass-Fed</h4>
-                <p>100% grass-fed & pasture-raised beef tallow</p>
-              </div>
-              <div className="about-value">
-                <h4>🧪 Lab Tested</h4>
-                <p>Third-party tested for purity & safety</p>
-              </div>
-              <div className="about-value">
-                <h4>♻️ Zero Waste</h4>
-                <p>Plastic-free, compostable & glass packaging</p>
-              </div>
-              <div className="about-value">
-                <h4>🤲 Small Batch</h4>
-                <p>Handcrafted in small batches for quality</p>
-              </div>
+            {/* Pillars */}
+            <div className="about-pillars">
+              {PILLARS.map((p) => (
+                <div key={p.title} className="pillar">
+                  <h4>{p.title}</h4>
+                  <p>{p.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
