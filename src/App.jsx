@@ -6,7 +6,7 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-function App() {
+export default function App() {
   return (
     <>
       <Navbar />
@@ -21,5 +21,3 @@ function App() {
     </>
   );
 }
-
-export default App;
