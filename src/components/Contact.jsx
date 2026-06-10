@@ -1,61 +1,74 @@
+import { useState } from 'react';
+
+const CONTACT_ITEMS = [
+  'Orders usually ship within 2 business days',
+  'hello@ancestralglow.com',
+  'Instagram · TikTok · Facebook',
+];
+
 export default function Contact() {
+  const [sent, setSent] = useState(false);
+
+  // Basic form submit handler — wire up to your backend / Formspree / Netlify Forms as needed
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSent(true);
+  };
+
   return (
     <section className="section contact-section" id="contact">
       <div className="container">
-        <h2 className="section-title fade-in">Get in Touch</h2>
-        <p className="section-subtitle fade-in" style={{ animationDelay: '0.1s' }}>
-          Have questions about our products or want to place a bulk order? 
-          We'd love to hear from you.
-        </p>
-
         <div className="contact-grid">
-          <div className="contact-info fade-in" style={{ animationDelay: '0.2s' }}>
-            <h3>Let's Talk Tallow</h3>
+          {/* Info column */}
+          <div className="contact-info-col">
+            <span className="section-label">Get in Touch</span>
+            <h3>We'd love to hear from you</h3>
             <p>
-              We're here to help! Whether you have a question about ingredients, 
-              need skincare advice, or want to discuss wholesale opportunities — 
-              reach out anytime.
+              Have a question about an order, an ingredient, or just want to say hello?
+              Drop us a message and we'll get back to you within one business day.
             </p>
-
-            <ul className="contact-details">
-              <li>hello@ancestralglow.com</li>
-              <li>Response within 24 hours</li>
-              <li>Free consultations available</li>
-              <li>Wholesale & bulk pricing</li>
+            <ul className="contact-items">
+              {CONTACT_ITEMS.map((item) => (
+                <li key={item}>
+                  <span className="dot" />
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
 
-          <form
-            className="contact-form fade-in"
-            style={{ animationDelay: '0.3s' }}
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert('✅ Message sent! (Demo — this is a static storefront. For real orders, email us at hello@ancestralglow.com)');
-            }}
-          >
-            <div className="form-group">
-              <label htmlFor="name">Your Name</label>
-              <input type="text" id="name" placeholder="Jane Doe" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" placeholder="jane@example.com" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                placeholder="Tell us what you're looking for..."
-                required
-              />
-            </div>
-
-            <button type="submit" className="btn btn-primary btn-large" style={{ width: '100%' }}>
-              Send Message
-            </button>
-          </form>
+          {/* Form column */}
+          <div className="contact-form-card">
+            {sent ? (
+              <div style={{ textAlign: 'center', padding: '2rem 0' }}>
+                <p style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🌿</p>
+                <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'var(--bark)', marginBottom: '0.5rem' }}>
+                  Message received!
+                </h4>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                  We'll get back to you within one business day.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <div className="form-row">
+                  <label htmlFor="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name" required />
+                </div>
+                <div className="form-row">
+                  <label htmlFor="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                </div>
+                <div className="form-row">
+                  <label htmlFor="message">Message</label>
+                  <textarea id="message" name="message" placeholder="What's on your mind?" required />
+                </div>
+                <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
+                  Send Message
+                </button>
+              </form>
+            )}
+          </div>
         </div>
       </div>
     </section>
